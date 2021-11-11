@@ -30,6 +30,7 @@ dbc.themes.LITERA
 dbc.themes.LUMEN
 dbc.themes.LUX
 dbc.themes.MATERIA
+dbc.themes.MORPH
 dbc.themes.MINTY
 dbc.themes.PULSE
 dbc.themes.SANDSTONE
@@ -44,7 +45,7 @@ dbc.themes.YETI
 """
 
 external_stylesheets = [
-    dbc.themes.BOOTSTRAP, # Bootswatch theme
+    dbc.themes.MORPH, # Bootswatch theme
     'https://use.fontawesome.com/releases/v5.9.0/css/all.css', # for social media icons
 ]
 
@@ -54,5 +55,5 @@ meta_tags=[
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets, meta_tags=meta_tags)
 app.config.suppress_callback_exceptions = True # see https://dash.plot.ly/urls
-app.title = 'YOUR APP NAME' # appears in browser title bar
+app.title = "Predict Your Movie's Box Office" # appears in browser title bar
 server = app.server
