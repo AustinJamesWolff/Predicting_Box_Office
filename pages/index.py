@@ -5,6 +5,8 @@ from dash import dcc
 from dash import html
 from dash.dependencies import Input, Output
 import plotly.express as px
+from joblib import load
+
 
 # Imports from this application
 from app import app
