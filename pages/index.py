@@ -11,6 +11,9 @@ from joblib import load
 # Imports from this application
 from app import app
 
+model_xgb_2 = load('assets/model_xgb_2.joblib')
+
+
 # 2 column layout. 1st column width = 4/12
 # https://dash-bootstrap-components.opensource.faculty.ai/l/components/layout
 column1 = dbc.Col(
@@ -30,14 +33,14 @@ column1 = dbc.Col(
     md=4,
 )
 
-gapminder = px.data.gapminder()
-fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
-           hover_name="country", log_x=True, size_max=60)
+# gapminder = px.data.gapminder()
+# fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
+#            hover_name="country", log_x=True, size_max=60)
 
-column2 = dbc.Col(
-    [
-        dcc.Graph(figure=fig),
-    ]
-)
+# column2 = dbc.Col(
+#     [
+#         dcc.Graph(figure=fig),
+#     ]
+# )
 
-layout = dbc.Row([column1, column2])
+# layout = dbc.Row([column1, column2])

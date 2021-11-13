@@ -8,6 +8,9 @@ from dash.dependencies import Input, Output
 # Imports from this application
 from app import app
 
+model_xgb_2 = load('assets/model_xgb_2.joblib')
+
+
 # 1 column layout
 # https://dash-bootstrap-components.opensource.faculty.ai/l/components/layout
 column1 = dbc.Col(
