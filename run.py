@@ -7,17 +7,14 @@ from dash.dependencies import Input, Output
 
 # Imports from this application
 from app import app, server
-from pages import index, predictions, insights, process, pagename
 
 # Navbar docs: https://dash-bootstrap-components.opensource.faculty.ai/l/components/navbar
 navbar = dbc.NavbarSimple(
-    brand="Austin James Wolff",
+    brand="Austin Wolff",
     brand_href='/', 
     children=[
-        dbc.NavItem(dcc.Link('Predictions', href='/predictions', className='nav-link')), 
-        dbc.NavItem(dcc.Link('Insights', href='/insights', className='nav-link')), 
-        dbc.NavItem(dcc.Link('Process', href='/process', className='nav-link')), 
-        dbc.NavItem(dcc.Link('Page Name', href='/pagename', className='nav-link')),
+        dbc.NavItem(dcc.Link('Predict', href='/predictions', className='nav-link')), 
+        dbc.NavItem(dcc.Link('Research', href='/insights', className='nav-link'))
     ],
     sticky='top',
     color='light', 
@@ -36,11 +33,9 @@ footer = dbc.Container(
         dbc.Col(
             html.P(
                 [
-                    html.Span('Austin James Wolff', className='mr-2'), 
-                    html.A(html.I(className='fas fa-envelope-square mr-1'), href='mailto:<you>@<provider>.com'), 
-                    html.A(html.I(className='fab fa-github-square mr-1'), href='https://github.com/<you>/<repo>'), 
-                    html.A(html.I(className='fab fa-linkedin mr-1'), href='https://www.linkedin.com/in/<you>/'), 
-                    html.A(html.I(className='fab fa-twitter-square mr-1'), href='https://twitter.com/<you>'), 
+                    html.Span('Austin Wolff', className='mr-2'), 
+                    html.A(html.I(className='fab fa-github-square mr-1'), href='https://github.com/AustinJamesWolff/Data-Science-Portfolio/tree/main/Box_Office_XGBoost_Regression'), 
+                    html.A(html.I(className='fab fa-linkedin mr-1'), href='https://www.linkedin.com/in/austin-james-wolff/')
                 ], 
                 className='lead'
             )
@@ -62,21 +57,21 @@ app.layout = html.Div([
 
 
 # URL Routing for Multi-Page Apps: https://dash.plot.ly/urls
-@app.callback(Output('page-content', 'children'),
-              [Input('url', 'pathname')])
-def display_page(pathname):
-    if pathname == '/':
-        return index.layout
-    elif pathname == '/predictions':
-        return predictions.layout
-    elif pathname == '/insights':
-        return insights.layout
-    elif pathname == '/process':
-        return process.layout
-    elif pathname == '/pagename':
-        return pagename.layout
-    else:
-        return dcc.Markdown('## Page not found')
+# @app.callback(Output('page-content', 'children'),
+#               [Input('url', 'pathname')])
+# def display_page(pathname):
+#     if pathname == '/':
+#         return index.layout
+#     elif pathname == '/predictions':
+#         return predictions.layout
+#     elif pathname == '/insights':
+#         return insights.layout
+#     elif pathname == '/process':
+#         return process.layout
+#     elif pathname == '/pagename':
+#         return pagename.layout
+#     else:
+#         return dcc.Markdown('## Page not found')
 
 # Run app server: https://dash.plot.ly/getting-started
 if __name__ == '__main__':
