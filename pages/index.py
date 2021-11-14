@@ -11,7 +11,7 @@ from joblib import load
 # Imports from this application
 from app import app
 
-app = dash.Dash(__name__)
+# app = dash.Dash(__name__)
 
 # model_xgb_2 = load('assets/model_xgb_2.joblib') # Uses Total_Gross_Bankability
 # model_xgb_3 = load('assets/model_xgb_3.joblib') # NO Total_Gross_Bankability
