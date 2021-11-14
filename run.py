@@ -58,21 +58,21 @@ app.layout = html.Div([
 
 
 # URL Routing for Multi-Page Apps: https://dash.plot.ly/urls
-# @app.callback(Output('page-content', 'children'),
-#               [Input('url', 'pathname')])
-# def display_page(pathname):
-#     if pathname == '/':
-#         return index.layout
-#     elif pathname == '/predictions':
-#         return predictions.layout
-#     elif pathname == '/insights':
-#         return insights.layout
-#     elif pathname == '/process':
-#         return process.layout
-#     elif pathname == '/pagename':
-#         return pagename.layout
-#     else:
-#         return dcc.Markdown('## Page not found')
+@app.callback(Output('page-content', 'children'),
+              [Input('url', 'pathname')])
+def display_page(pathname):
+    if pathname == '/':
+        return index.layout
+    elif pathname == '/predictions':
+        return predictions.layout
+    elif pathname == '/insights':
+        return insights.layout
+    elif pathname == '/process':
+        return process.layout
+    elif pathname == '/pagename':
+        return pagename.layout
+    else:
+        return dcc.Markdown('## Page not found')
 
 # Run app server: https://dash.plot.ly/getting-started
 if __name__ == '__main__':
