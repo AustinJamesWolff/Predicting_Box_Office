@@ -14,7 +14,7 @@ navbar = dbc.NavbarSimple(
     brand_href='/', 
     children=[
         dbc.NavItem(dcc.Link('Predict', href='/predictions', className='nav-link')), 
-        dbc.NavItem(dcc.Link('Research', href='/insights', className='nav-link'))
+        dbc.NavItem(dcc.Link('Research', href='https://www.linkedin.com/pulse/building-predictive-models-random-forest-xgboost-grid-austin-wolff/', className='nav-link'))
     ],
     sticky='top',
     color='light', 
