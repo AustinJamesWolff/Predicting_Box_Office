@@ -14,10 +14,12 @@ navbar = dbc.NavbarSimple(
     brand="Austin Wolff",
     brand_href='/', 
     children=[
-        dbc.NavItem(dcc.Link('LinkedIn', href='https://www.linkedin.com/in/austin-james-wolff/', className='nav-link')), 
-        dbc.NavItem(dcc.Link('Research', href='https://www.linkedin.com/pulse/building-predictive-models-random-forest-xgboost-grid-austin-wolff/', className='nav-link'))
-        # html.A(html.I('GitHub', href='https://github.com/AustinJamesWolff/Data-Science-Portfolio/tree/main/Box_Office_XGBoost_Regression', target="_blank"), 
-        # html.A(html.I('LinkedIn', href='https://www.linkedin.com/in/austin-james-wolff/', target="_blank")
+        # dbc.NavItem(dcc.Link('LinkedIn', href='https://www.linkedin.com/in/austin-james-wolff/', className='nav-link')), 
+        # dbc.NavItem(dcc.Link('Research', href='https://www.linkedin.com/pulse/building-predictive-models-random-forest-xgboost-grid-austin-wolff/', className='nav-link')),
+        dbc.NavItem(html.A('Research', href='https://www.linkedin.com/pulse/building-predictive-models-random-forest-xgboost-grid-austin-wolff/', target="_blank", className='nav-link')),
+        dbc.NavItem(html.A('Limitations', href='https://www.linkedin.com/pulse/using-multiple-linear-regression-examine-what-variables-austin-wolff/#Conclusion', target="_blank", className='nav-link')),
+        dbc.NavItem(html.A('GitHub', href='https://github.com/AustinJamesWolff/Data-Science-Portfolio/tree/main/Box_Office_XGBoost_Regression', target="_blank", className='nav-link')), 
+        dbc.NavItem(html.A('LinkedIn', href='https://www.linkedin.com/in/austin-james-wolff/', target="_blank", className='nav-link'))
     ],
     sticky='top',
     color='light', 
@@ -38,6 +40,7 @@ footer = dbc.Container(
                 [
                     html.Span('Austin Wolff ', className='mr-2'), 
                     html.A(html.I(className='fab fa-github-square mr-1'), href='https://github.com/AustinJamesWolff/Data-Science-Portfolio/tree/main/Box_Office_XGBoost_Regression', target="_blank"), 
+                    html.Span(' ', className='mr-2'),
                     html.A(html.I(className='fab fa-linkedin mr-1'), href='https://www.linkedin.com/in/austin-james-wolff/', target="_blank")
                 ], 
                 className='lead'
