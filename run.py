@@ -4,6 +4,7 @@ import dash_bootstrap_components as dbc
 from dash import dcc
 from dash import html
 from dash.dependencies import Input, Output
+from pages import index
 
 # Imports from this application
 from app import app, server
