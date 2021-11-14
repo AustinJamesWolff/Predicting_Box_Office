@@ -11,6 +11,8 @@ from joblib import load
 # Imports from this application
 from app import app
 
+app = dash.Dash(__name__)
+
 # model_xgb_2 = load('assets/model_xgb_2.joblib') # Uses Total_Gross_Bankability
 # model_xgb_3 = load('assets/model_xgb_3.joblib') # NO Total_Gross_Bankability
 model_xgb_4 = load('assets/model_xgb_4.joblib') # NO Total_Gross_Bankability, NO Region
@@ -74,10 +76,4 @@ row2 = dbc.Row(
 )
 
 
-
-
-
-
-
-
-# layout = dbc.Row([column1, column2])
+layout = dbc.Container([row1, row2])
