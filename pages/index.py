@@ -76,7 +76,7 @@ model_xgb_4 = load('assets/model_xgb_4.joblib') # NO Total_Gross_Bankability, NO
 
 
 
-column1 = dbc.Row(
+column1 = dbc.Col(
             [
                 dcc.Markdown(
                     """
@@ -103,4 +103,4 @@ column2 = dbc.Col(
             ]
         )
 
-layout = dbc.Container([column1, column2])
+layout = dbc.Row([column1, column2])
