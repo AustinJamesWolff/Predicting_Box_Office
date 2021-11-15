@@ -14,7 +14,7 @@ pandas = "*"
 joblib = "*"
 sklearn = "*"
 category-encoders = "*"
-xgboost = "*"
+xgboost = "==0.80"
 
 [requires]
 python_version = "3"
