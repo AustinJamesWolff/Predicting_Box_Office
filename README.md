@@ -1,3 +1,5 @@
-# Dash Template
+# Predict Your Movie's Box Office!
 
-[Instructions](https://lambdaschool.github.io/ds/unit2/dash-template/)
+[Start predicting.](https://box-office-predictions-usa.herokuapp.com/)
+
+See the jupyter notebook [here.](https://github.com/AustinJamesWolff/Data-Science-Portfolio/tree/main/Box_Office_XGBoost_Regression)
